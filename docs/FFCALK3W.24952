@@ -1,0 +1,503 @@
+*****************************************************************
+*            Chaine K3W - Triplet UNO (UNIX/ORACLE)             *
+*****************************************************************
+
+
+JOB : JK3W                            DATE : 2019/04/26 16:59:46
+
+
+*-------------------------- STEP050A ---------------------------*
+*             Chargement de paramètres dans T050PA              *
+*---------------------------------------------------------------*
+
+
+*-------------------------- STEP050B ---------------------------*
+*             Chargement de paramètres dans T050PB              *
+*---------------------------------------------------------------*
+
+
+*-------------------------- STEP050C -----------------------*
+*                  REMOVE du fichier PSBK3WNT.C19              *
+*-----------------------------------------------------------*
+rm: cannot remove `/qa161/file/PAPFR/PSBK3WNT.C19': No such file or directory
+rm: cannot remove `/qa161/file/PAPFR/PSBK3WES.C19': No such file or directory
+rm: cannot remove `/qa161/file/PAPFR/PSBK3WNL.C19': No such file or directory
+rm: cannot remove `/qa161/file/PAPFR/PSBK3WS1.C19': No such file or directory
+
+
+*-------------------------- STEP050N ---------------------------*
+*                  Initialisation de la phase                   *
+*---------------------------------------------------------------*
+FP800BOP-BBAD0001-------------------------------------------------------------------------------------------------------
+FP800BOP-BBAD0002-IDENTIFICATION DU PROGRAMME : BOP/7.000/2018-07-30-11.13.55/F/                                        
+FP800BOP-BBAD0003-DEBUT DE TRAITEMENT   - HORODATAGE DE DEBUT : 2019-04-26-16.59.46                                     
+FP800BOP-BBAD0004-LISTE DES PARAMETRES LUS                                                                              
+FP800BOP-BBAD0006-....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8                      
+FP800BOP-00000000-PA45000003221FFCAL0                                                                                   
+FP800BOP-BBAD0005-LISTE DES PARAMETRES INTERPRETES ET UTILISES                                                          
+FP800BOP-BBAD0006-....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8                      
+FP800BOP-00000000-PA45000003221FFCAL0                                                                                   
+FP800BOP-BBAD0004-LISTE DES PARAMETRES LUS                                                                              
+FP800BOP-BBAD0006-....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8                      
+FP800BOP-00000000-CHECK                                                                                                 
+FP800BOP-00000000-DAS1                                                                                                  
+FP800BOP-00000000-DBS1                                                                                                  
+FP800BOP-00000000-DKS1                                                                                                  
+FP800BOP-00000000-DLS1                                                                                                  
+FP800BOP-00000000-U6S1                                                                                                  
+FP800BOP-BBAD0005-LISTE DES PARAMETRES INTERPRETES ET UTILISES                                                          
+FP800BOP-BBAD0006-....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8                      
+FP800BOP-00000000-DAS1                                                                                                  
+FP800BOP-00000000-DBS1                                                                                                  
+FP800BOP-00000000-DKS1                                                                                                  
+FP800BOP-00000000-DLS1                                                                                                  
+FP800BOP-00000000-U6S1                                                                                                  
+FP800BOP-BBAO0002-TRAVAIL TRAITE 000000000031889 K3W CALCUL TEST ALLHRLO                                                
+FP800BOP-BBAD0008-STATISTIQUES SUR LES FICHIERS (ENREGISTREMENTS LUS/ECRITS)                                            
+FP800BOP-BBAD0009-NT (NT) : 000000000000001                                                                             
+FP800BOP-BBAD0009-PA (PA) : 000000000000001                                                                             
+FP800BOP-BBAD0009-PB (PB) : 000000000000006                                                                             
+FP800BOP-BBAD0009-SB (S1) : 000000000000002                                                                             
+FP800BOP-BBAD0010-*** BOP : FIN NORMALE  - HORODATAGE DE FIN   : 2019-04-26-16.59.46  **** CODE RETOUR 00 ******        
+
+
+*-------------------------- STEP100A ---------------------------*
+*             Chargement de paramètres dans T100PA              *
+*---------------------------------------------------------------*
+
+
+*-------------------------- STEP100N ---------------------------*
+*            Demande de résolution des présélections            *
+*---------------------------------------------------------------*
+AS800BOU-BBAD0001-------------------------------------------------------------------------------------------------------
+AS800BOU-BBAD0002-IDENTIFICATION DU PROGRAMME : BOU/7.000/2017-04-25-12.31.08/F/                                        
+AS800BOU-BBAD0003-DEBUT DE TRAITEMENT   - HORODATAGE DE DEBUT : 2019-04-26-16.59.46                                     
+AS800BOU-BBAO0002-TRAVAIL TRAITE ZO 000031889                                                                           
+AS800BOU-BBAD0020-FICHIER VIDE : PB                                                                                     
+AS800BOU-BBAD0004-LISTE DES PARAMETRES LUS                                                                              
+AS800BOU-BBAD0006-....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8                      
+AS800BOU-00000000-PA5P                                                                                                  
+AS800BOU-00000000-PA5FSEL1         SEL                                                                                  
+AS800BOU-BBAD0005-LISTE DES PARAMETRES INTERPRETES ET UTILISES                                                          
+AS800BOU-BBAD0006-....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8                      
+AS800BOU-00000000-PA5P                                                                                                  
+AS800BOU-00000000-PA5FSEL1         SEL                                                                                  
+AS800BOU-BBAO0025-DIAGRAMME UTILISE DIAG DIAG ( ZO00 ).                                                                 
+AS800BOU-BBAD0008-STATISTIQUES SUR LES FICHIERS (ENREGISTREMENTS LUS/ECRITS)                                            
+AS800BOU-BBAD0009-CA (C1) : 000000000000002                                                                             
+AS800BOU-BBAD0009-PB (PB) : 000000000000000                                                                             
+AS800BOU-BBAD0009-PA (PA) : 000000000000002                                                                             
+AS800BOU-BBAD0010-*** BOU : FIN NORMALE  - HORODATAGE DE FIN   : 2019-04-26-16.59.46  **** CODE RETOUR 01 ******        
+rm: cannot remove `/qa161/txt/tmp/T100PB.24952': No such file or directory
+rm: cannot remove `/qa161/txt/tmp/T100C2.24952': No such file or directory
+rm: cannot remove `/qa161/txt/tmp/T100C3.24952': No such file or directory
+rm: cannot remove `/qa161/txt/tmp/T100C4.24952': No such file or directory
+rm: cannot remove `/qa161/txt/tmp/T100C5.24952': No such file or directory
+rm: cannot remove `/qa161/txt/tmp/T100C6.24952': No such file or directory
+rm: cannot remove `/qa161/txt/tmp/T100C7.24952': No such file or directory
+rm: cannot remove `/qa161/txt/tmp/T100C8.24952': No such file or directory
+rm: cannot remove `/qa161/txt/tmp/T100C9.24952': No such file or directory
+
+
+*-------------------------- STEP105N ----------------*
+*          Execution module JAVA                    *
+*---------------------------------------------------*
+Filein: /qa161/txt/tmp/T100C1.24952
+Fileout: /qa161/txt/tmp/T105JV.24952
+Reading INI file /qa161/txt/tmp/T100C1.24952 ....
+Action: 0
+Writing response to file /qa161/txt/tmp/T105JV.24952 ...
+Wrote response to file /qa161/txt/tmp/T105JV.24952
+
+
+*-------------------------- STEP110A ---------------------------*
+*             Chargement de paramètres dans T110PA              *
+*---------------------------------------------------------------*
+
+
+*-------------------------- STEP110B ---------------------------*
+*             Initialisation du fichier vide T110PC             *
+*---------------------------------------------------------------*
+
+
+*-------------------------- STEP110N ---------------------------*
+*                  Exécution des présélections                  *
+*---------------------------------------------------------------*
+AS800BOV-BBAD0001-------------------------------------------------------------------------------------------------------
+AS800BOV-BBAD0002-IDENTIFICATION DU PROGRAMME : BOV/7.000/2017-04-25-12.32.27/F/                                        
+AS800BOV-BBAD0003-DEBUT DE TRAITEMENT   - HORODATAGE DE DEBUT : 2019-04-26-16.59.47                                     
+AS800BOV-BBAD0004-LISTE DES PARAMETRES LUS                                                                              
+AS800BOV-BBAD0006-....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8                      
+AS800BOV-00000000-PA5SZY                                                                                                
+AS800BOV-BBAX0035-SELECTION POPULATION CONSTITUEE PAR L'UTILISATEUR                                                     
+*GE01BMQ-BBAD0001-------------------------------------------------------------------------------------------------------
+*GE01BMQ-BBAD0002-IDENTIFICATION DU PROGRAMME : BMQ/7.000/2017-04-19-16.40.53/F/                                        
+*GE01BMQ-BBAM0021-POPULATION 0065 CONTENANT 000000000000001 DOSSIERS A ETE CREEE                                        
+AS800BOV-BBAD0008-STATISTIQUES SUR LES FICHIERS (ENREGISTREMENTS LUS/ECRITS)                                            
+AS800BOV-BBAD0009-PD (PD) : 000000000000000                                                                             
+AS800BOV-BBAD0009-PS (PS) : 000000000000001                                                                             
+AS800BOV-BBAD0010-*** BOV : FIN NORMALE  - HORODATAGE DE FIN   : 2019-04-26-16.59.47  **** CODE RETOUR 00 ******        
+
+
+*-------------------------- STEP240N ---------------------------*
+*                       Tri des demandes                        *
+*---------------------------------------------------------------*
+
+
+
+
+*-------------------------- STEP260A -----------------------*
+*                  REMOVE du fichier PSBK3WA.C19               *
+*-----------------------------------------------------------*
+rm: cannot remove `/qa161/file/PAPFR/PSBK3WA.C19': No such file or directory
+
+
+*-------------------------- STEP260N ---------------------------*
+*                   Extraction et chargement                    *
+*---------------------------------------------------------------*
+FFCALDAV-BBAD0001-------------------------------------------------------------------------------------------------------
+EX017BG0-BBAD0001-------------------------------------------------------------------------------------------------------
+EX017BG0-BBAD0001-------------------------------------------------------------------------------------------------------
+EX017BG0-BBAD0002-IDENTIFICATION DU PROGRAMME : BG0/7.000/2017-10-12-12.48.41/F/                                        
+EX017BG0-BBAD0002-IDENTIFICATION DU PROGRAMME : DAV/7.000/2019-02-27-11.13.07/F/                                        
+EX017BG0-BBAD0003-DEBUT DE TRAITEMENT   - HORODATAGE DE DEBUT : 2019-04-26-16.59.47                                     
+FFCALDAV-BBAD0004-LISTE DES PARAMETRES LUS                                                                              
+FFCALDAV-BBAD0006-....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8                      
+FFCALDAV-00000000-DA18ANMT1905           0CFR                                                                           
+FFCALDAV-BBAD0004-LISTE DES PARAMETRES LUS                                                                              
+FFCALDAV-BBAD0006-....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8                      
+FFCALDAV-00000000-DA18B100          S00MT1812MT18120001-01-01     SAL                                                   
+FDAZDB9J-BBAD0001-------------------------------------------------------------------------------------------------------
+FDAZDB9J-BBAD0002-IDENTIFICATION DU PROGRAMME : B9J/7.000/2019-04-25-12.23.36/F/                                        
+FDAZDB9S-BBAD0001-------------------------------------------------------------------------------------------------------
+FDAZDB9S-BBAD0002-IDENTIFICATION DU PROGRAMME : B9S/7.000/2019-04-25-12.23.37/F/                                        
+FDAZDB93-BBAD0001-------------------------------------------------------------------------------------------------------
+FDAZDB93-BBAD0002-IDENTIFICATION DU PROGRAMME : B93/7.000/2019-04-25-12.23.28/F/                                        
+FFCALDAV-DDAD0011-LISTE DES PARAMETRES CREES EN SORTIE SUR FA-FICHIER :                                                 
+FFCALDAV-BBAD0006-....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8                      
+FFCALDAV-00000000-100          N  0000120190505010519310519  1904  1812MT   SAL0 99999SS00                              
+FFCALDAV-00000000-100             999  000031889                                      0001-01-010                       
+FFCALDAV-BBAD0008-STATISTIQUES SUR LES FICHIERS (ENREGISTREMENTS LUS/ECRITS)                                            
+FFCALDAV-BBAD0009-FA-FICHIER (WRITE) : 000000000000002                                                                  
+FFCALDAV-BBAD0009-FX-FICHIER (READ.) : 000000000000002                                                                  
+EX017BG0-BBAD0010-*** DAV : FIN NORMALE  - HORODATAGE DE FIN   : 2019-04-26-16.59.47  **** CODE RETOUR 00 ******        
+
+
+*-------------------------- STEP280A -----------------------*
+*                  REMOVE du fichier PSBK3WPO.C19              *
+*-----------------------------------------------------------*
+rm: cannot remove `/qa161/file/PAPFR/PSBK3WPO.C19': No such file or directory
+rm: cannot remove `/qa161/file/PAPFR/PSBBE9PE.C19': No such file or directory
+
+
+*-------------------------- STEP280N ---------------------------*
+*                    Création de population                     *
+*---------------------------------------------------------------*
+FFCALDC4-BBAD0001-------------------------------------------------------------------------------------------------------
+EX017BG0-BBAD0001-------------------------------------------------------------------------------------------------------
+EX017BG0-BBAD0001-------------------------------------------------------------------------------------------------------
+EX017BG0-BBAD0002-IDENTIFICATION DU PROGRAMME : BG0/7.000/2017-10-12-12.48.41/F/                                        
+EX017BG0-BBAD0002-IDENTIFICATION DU PROGRAMME : DC4/7.000/2019-02-27-11.13.20/F/                                        
+EX017BG0-BBAD0003-DEBUT DE TRAITEMENT   - HORODATAGE DE DEBUT : 2019-04-26-16.59.47                                     
+FDAZDB9J-BBAD0001-------------------------------------------------------------------------------------------------------
+FDAZDB9J-BBAD0002-IDENTIFICATION DU PROGRAMME : B9J/7.000/2019-04-25-12.23.36/F/                                        
+*GE01BMQ-BBAD0001-------------------------------------------------------------------------------------------------------
+*GE01BMQ-BBAD0002-IDENTIFICATION DU PROGRAMME : BMQ/7.000/2017-04-19-16.40.53/F/                                        
+*GE01BMQ-BBAM0021-POPULATION 0066 CONTENANT 000000000000001 DOSSIERS A ETE CREEE                                        
+FFCALDC4-BBAD0008-STATISTIQUES SUR LES FICHIERS (ENREGISTREMENTS LUS/ECRITS)                                            
+FFCALDC4-BBAD0009-PA-FICHIER (READ) : 000000000000002                                                                   
+FFCALDC4-BBAD0009-PE-FICHIER (WRITE) : 000000000000002                                                                  
+FFCALDC4-BBAD0009-PP-FICHIER (READ) : 000000000000001                                                                   
+FFCALDC4-BBAD0009-PO-FICHIER (WRITE) : 000000000000001                                                                  
+EX017BG0-BBAD0010-*** DC4 : FIN NORMALE  - HORODATAGE DE FIN   : 2019-04-26-16.59.47  **** CODE RETOUR 00 ******        
+
+
+*-------------------------- STEP300A ---------------------------*
+*             Chargement de paramètres dans T300DPR             *
+*---------------------------------------------------------------*
+
+
+*-------------------------- STEP300B ---------------------------*
+*            Initialisation du fichier vide T300DE1             *
+*---------------------------------------------------------------*
+
+
+*-------------------------- STEP300N ---------------------------*
+*         Conversion du matricule en numéro de dossier          *
+*---------------------------------------------------------------*
+FDPGMDAA-BBAD0001-------------------------------------------------------------------------------------------------------
+EX017BG0-BBAD0001-------------------------------------------------------------------------------------------------------
+EX017BG0-BBAD0001-------------------------------------------------------------------------------------------------------
+EX017BG0-BBAD0002-IDENTIFICATION DU PROGRAMME : BG0/7.000/2017-10-12-12.48.41/F/                                        
+EX017BG0-BBAD0002-IDENTIFICATION DU PROGRAMME : DAA/7.000/2019-04-25-12.25.05/F/                                        
+EX017BG0-BBAD0003-DEBUT DE TRAITEMENT   - HORODATAGE DE DEBUT : 2019-04-26-16.59.48                                     
+FDPGMDAA-BBAD0004-LISTE DES PARAMETRES LUS                                                                              
+FDPGMDAA-BBAD0006-....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8                      
+FDPGMDAA-00000000-DA01     01                                                                                           
+FDPGMDAA-BBAD0005-LISTE DES PARAMETRES INTERPRETES ET UTILISES                                                          
+FDPGMDAA-BBAD0006-....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8                      
+FDPGMDAA-00000000-DA01     01                                                                                           
+FDPGMDAA-BBAD0008-STATISTIQUES SUR LES FICHIERS (ENREGISTREMENTS LUS/ECRITS)                                            
+FDPGMDAA-BBAD0009-PR-FICHIER (READ.) : 000000000000001                                                                  
+FDPGMDAA-BBAD0009-E1-FICHIER (READ.) : 000000000000000                                                                  
+FDPGMDAA-BBAD0009-S1-FICHIER (WRITE) : 000000000000000                                                                  
+FDPGMDAA-BBAD0009-E2-FICHIER (READ.) : 000000000000000                                                                  
+FDPGMDAA-BBAD0009-S2-FICHIER (WRITE) : 000000000000000                                                                  
+FDPGMDAA-BBAD0009-E3-FICHIER (READ.) : 000000000000000                                                                  
+FDPGMDAA-BBAD0009-S3-FICHIER (WRITE) : 000000000000000                                                                  
+FDPGMDAA-BBAD0009-E4-FICHIER (READ.) : 000000000000000                                                                  
+FDPGMDAA-BBAD0009-S4-FICHIER (WRITE) : 000000000000000                                                                  
+FDPGMDAA-BBAD0009-E5-FICHIER (READ.) : 000000000000000                                                                  
+FDPGMDAA-BBAD0009-S5-FICHIER (WRITE) : 000000000000000                                                                  
+FDPGMDAA-BBAD0009-E6-FICHIER (READ.) : 000000000000000                                                                  
+FDPGMDAA-BBAD0009-S6-FICHIER (WRITE) : 000000000000000                                                                  
+FDPGMDAA-BBAD0009-E7-FICHIER (READ.) : 000000000000000                                                                  
+FDPGMDAA-BBAD0009-S7-FICHIER (WRITE) : 000000000000000                                                                  
+FDPGMDAA-BBAD0009-E8-FICHIER (READ.) : 000000000000000                                                                  
+FDPGMDAA-BBAD0009-S8-FICHIER (WRITE) : 000000000000000                                                                  
+FDPGMDAA-BBAD0009-E9-FICHIER (READ.) : 000000000000000                                                                  
+FDPGMDAA-BBAD0009-S9-FICHIER (WRITE) : 000000000000000                                                                  
+EX017BG0-BBAD0010-*** DAA : FIN NORMALE  - HORODATAGE DE FIN   : 2019-04-26-16.59.48  **** CODE RETOUR 00 ******        
+
+
+*-------------------------- STEP320N ---------------------------*
+*               Tri des éléments variables batch                *
+*---------------------------------------------------------------*
+
+
+
+
+*-------------------------- STEP340A ---------------------------*
+*             Chargement de paramètres dans T340PY              *
+*---------------------------------------------------------------*
+
+
+*-------------------------- STEP340B ---------------------------*
+*             Chargement de paramètres dans T340DPE             *
+*---------------------------------------------------------------*
+
+
+*-------------------------- STEP340C -----------------------*
+*                  REMOVE du fichier PSBK3WR.C19               *
+*-----------------------------------------------------------*
+rm: cannot remove `/qa161/file/PAPFR/PSBK3WR.C19': No such file or directory
+
+
+*-------------------------- STEP340N ---------------------------*
+*                          Extraction                           *
+*---------------------------------------------------------------*
+FFCALDB2-BBAD0001-------------------------------------------------------------------------------------------------------
+EX017BG0-BBAD0001-------------------------------------------------------------------------------------------------------
+EX017BG0-BBAD0001-------------------------------------------------------------------------------------------------------
+EX017BG0-BBAD0002-IDENTIFICATION DU PROGRAMME : BG0/7.000/2017-10-12-12.48.41/F/                                        
+EX017BG0-BBAD0002-IDENTIFICATION DU PROGRAMME : DB2/7.000/2019-04-19-16.25.14/F/                                        
+EX017BG0-BBAD0003-DEBUT DE TRAITEMENT   - HORODATAGE DE DEBUT : 2019-04-26-16.59.48                                     
+EX017BG0-BBAD0002-IDENTIFICATION DU PROGRAMME : DZZ/7.000/2019-04-19-16.29.15/F/                                        
+EX017BG0-BBAD0003-DEBUT DE TRAITEMENT   - HORODATAGE DE DEBUT : 2019-04-26-16.59.48                                     
+FDAZYBLS-BBAD0001-------------------------------------------------------------------------------------------------------
+FDAZYBLS-BBAD0002-IDENTIFICATION DU PROGRAMME : BLS/7.000/2019-04-25-12.24.08/F/                                        
+FDAZYBLS-BBAD0003-DEBUT DE TRAITEMENT   - HORODATAGE DE DEBUT : 2019-04-26-16.59.48                                     
+FDAZDB9S-BBAD0001-------------------------------------------------------------------------------------------------------
+FDAZDB9S-BBAD0002-IDENTIFICATION DU PROGRAMME : B9S/7.000/2019-04-25-12.23.37/F/                                        
+FDAZDB92-BBAD0001-------------------------------------------------------------------------------------------------------
+FDAZDB92-BBAD0002-IDENTIFICATION DU PROGRAMME : B92/7.000/2019-04-25-12.23.23/F/                                        
+FDAZDB9J-BBAD0001-------------------------------------------------------------------------------------------------------
+FDAZDB9J-BBAD0002-IDENTIFICATION DU PROGRAMME : B9J/7.000/2019-04-25-12.23.36/F/                                        
+FDAZDB93-BBAD0001-------------------------------------------------------------------------------------------------------
+FDAZDB93-BBAD0002-IDENTIFICATION DU PROGRAMME : B93/7.000/2019-04-25-12.23.28/F/                                        
+FDAZYBLS-BBAM0005-NOMBRE DE DOSSIERS TRAITES     : 000000000000001                                                      
+FFCALDZZ-BBAD0009-EMPLOYEES. (XTRAC) : 000000000000001                                                                  
+FFCALDZZ-BBAD0009-PAY DOSS.. (XTRAC) : 000000000000001                                                                  
+FFCALDB2-DDAD0098-FIN DE LA TABLE DES POPULATIONS                                                                       
+FDLZXBEB-BBAD0001-------------------------------------------------------------------------------------------------------
+FDLZXBEB-BBAD0002-IDENTIFICATION DU PROGRAMME : BEB/7.000/2019-01-21-15.42.02/F/                                        
+FDLZXBEB-DDAH0097-INSERT/UPDATE OF ZY8D: 000000000000000                                                                
+FFCALDB2-BBAD0008-STATISTIQUES SUR LES FICHIERS (ENREGISTREMENTS LUS/ECRITS)                                            
+FFCALDB2-BBAD0009-ER-FICHIER (WRITE) : 000000000000000                                                                  
+FFCALDB2-BBAD0009-ES-FICHIER (WRITE) : 000000000000000                                                                  
+FFCALDB2-BBAD0009-EV-FICHIER (READ.) : 000000000000000                                                                  
+FFCALDB2-BBAD0009-PA-FICHIER (READ.) : 000000000000002                                                                  
+FFCALDB2-BBAD0009-PO-FICHIER (READ.) : 000000000000001                                                                  
+FFCALDB2-BBAD0009-EV DOSSIER (READ.) : 000000000000000                                                                  
+FFCALDB2-BBAD0009-EV BATCH.. (READ.) : 000000000000000                                                                  
+FFCALDB2-BBAD0009-EV GENERES (READ.) : 000000000000000                                                                  
+FFCALDB2-BBAD0009-EV TYPE 90 (WRITE) : 000000000000000                                                                  
+FFCALDB2-BBAD0009-EV TYPE 93 (WRITE) : 000000000000000                                                                  
+FFCALDB2-BBAD0009-EV TYPE 97 (WRITE) : 000000000000000                                                                  
+FFCALDB2-BBAD0009-EV TYPE 9G (WRITE) : 000000000000000                                                                  
+FFCALDB2-BBAD0009-EMPLOYEES. (XTRAC) : 000000000000001                                                                  
+FFCALDB2-BBAD0009-PAY DOSS.. (XTRAC) : 000000000000001                                                                  
+EX017BG0-BBAD0010-*** DB2 : FIN NORMALE  - HORODATAGE DE FIN   : 2019-04-26-16.59.48  **** CODE RETOUR 00 ******        
+
+
+*-------------------------- STEP380N ---------------------------*
+*                 Tri des éléments temporaires                  *
+*---------------------------------------------------------------*
+
+
+
+
+*-------------------------- STEP390N ---------------------------*
+*            Chargement d'un fichier de type membre             *
+*---------------------------------------------------------------*
+
+
+*-------------------------- STEP400A ---------------------------*
+*             Chargement de paramètres dans T400DPE             *
+*---------------------------------------------------------------*
+
+
+*-------------------------- STEP400B -----------------------*
+*                  REMOVE du fichier PSBK3WX.C19               *
+*-----------------------------------------------------------*
+rm: cannot remove `/qa161/file/PAPFR/PSBK3WX.C19': No such file or directory
+rm: cannot remove `/qa161/file/PAPFR/PSBDINTW.C19': No such file or directory
+rm: cannot remove `/qa161/file/PAPFR/PSBK3WY.C19': No such file or directory
+rm: cannot remove `/qa161/file/PAPFR/PSBK3WT2.C19': No such file or directory
+
+
+*-------------------------- STEP400C ---------------------------*
+*             Chargement de paramètres dans T400PY              *
+*---------------------------------------------------------------*
+
+
+*-------------------------- STEP400D ---------------------------*
+*             Concaténation de fichiers sur T400IAA             *
+*---------------------------------------------------------------*
+
+
+*-------------------------- STEP400N ---------------------------*
+*                            Calcul                             *
+*---------------------------------------------------------------*
+FFCALDBI-BBAD0001-------------------------------------------------------------------------------------------------------
+EX017BG0-BBAD0001-------------------------------------------------------------------------------------------------------
+EX017BG0-BBAD0001-------------------------------------------------------------------------------------------------------
+EX017BG0-BBAD0002-IDENTIFICATION DU PROGRAMME : BG0/7.000/2017-10-12-12.48.41/F/                                        
+EX017BG0-BBAD0002-IDENTIFICATION DU PROGRAMME : DBI/7.000/2019-04-19-16.29.10/F/                                        
+EX017BG0-BBAD0003-DEBUT DE TRAITEMENT   - HORODATAGE DE DEBUT : 2019-04-26-16.59.49                                     
+EX017BG0-BBAD0002-IDENTIFICATION DU PROGRAMME : DZZ/7.000/2019-04-19-16.29.15/F/                                        
+EX017BG0-BBAD0003-DEBUT DE TRAITEMENT   - HORODATAGE DE DEBUT : 2019-04-26-16.59.49                                     
+FDAZYBLS-BBAD0001-------------------------------------------------------------------------------------------------------
+FDAZYBLS-BBAD0002-IDENTIFICATION DU PROGRAMME : BLS/7.000/2019-04-25-12.24.08/F/                                        
+FDAZYBLS-BBAD0003-DEBUT DE TRAITEMENT   - HORODATAGE DE DEBUT : 2019-04-26-16.59.49                                     
+FDAZYBLS-BBAD0012-DEPASSEMENT DE CAPACITE (TABLE WORKING) : ZY7L/000000000000900/000000000000900                        
+FDAZDB9S-BBAD0001-------------------------------------------------------------------------------------------------------
+FDAZDB9S-BBAD0002-IDENTIFICATION DU PROGRAMME : B9S/7.000/2019-04-25-12.23.37/F/                                        
+FDAZDB92-BBAD0001-------------------------------------------------------------------------------------------------------
+FDAZDB92-BBAD0002-IDENTIFICATION DU PROGRAMME : B92/7.000/2019-04-25-12.23.23/F/                                        
+FDAZDB9J-BBAD0001-------------------------------------------------------------------------------------------------------
+FDAZDB9J-BBAD0002-IDENTIFICATION DU PROGRAMME : B9J/7.000/2019-04-25-12.23.36/F/                                        
+EX017BG0-BBAD0002-IDENTIFICATION DU PROGRAMME : DB6/7.000/2017-04-25-11.17.41/F/                                        
+EX017BG0-BBAD0003-DEBUT DE TRAITEMENT   - HORODATAGE DE DEBUT : 2019-04-26-16.59.49                                     
+FDAZDB91-BBAD0001-------------------------------------------------------------------------------------------------------
+FDAZDB91-BBAD0002-IDENTIFICATION DU PROGRAMME : B91/7.000/2019-04-25-12.23.16/F/                                        
+FFCALDBI-FCBIZD02-User-defined message FC BIZDSN: La version du kit déclaratif utilisée est 5.0 et la phase en vigueur est DSN    P19V01.                                                                                                                                                                                                                     
+FFCALDBI-FCBIZD02-User-defined message FC BIZDSN: La réglementation 100 est de localisation FR.                                                                                                                                                                                                                                                               
+FFCALDBI-DDAD0095-MATRICULE 10001574 NON TRAITE, VOUS DEVEZ GERER LE DEBORDEMENT DES INFOS ETALEES                      
+FDLZXBEB-BBAD0001-------------------------------------------------------------------------------------------------------
+FDLZXBEB-BBAD0002-IDENTIFICATION DU PROGRAMME : BEB/7.000/2019-01-21-15.42.02/F/                                        
+FDAZYBLS-BBAM0005-NOMBRE DE DOSSIERS TRAITES     : 000000000000001                                                      
+FFCALDZZ-BBAD0009-EMPLOYEES. (XTRAC) : 000000000000001                                                                  
+FFCALDZZ-BBAD0009-PAY DOSS.. (XTRAC) : 000000000000001                                                                  
+FFCALDBI-DDAD0098-FIN DE LA TABLE DES POPULATIONS                                                                       
+FDLZXBEB-DDAH0097-INSERT/UPDATE OF ZY8D: 000000000000001                                                                
+FDAYSBE1-BBAD0001-------------------------------------------------------------------------------------------------------
+FDAYSBE1-BBAD0002-IDENTIFICATION DU PROGRAMME : BE1/7.000/2019-04-25-12.23.47/F/                                        
+FDAYSBE1-BBAL0004-NOMBRE DE DOSSIERS ECRITS : 000000000000000                                                           
+EX017BG0-BBAD0002-IDENTIFICATION DU PROGRAMME : DBA/7.000/2019-04-19-18.21.38/F/                                        
+EX017BG0-BBAD0003-DEBUT DE TRAITEMENT   - HORODATAGE DE DEBUT : 2019-04-26-16.59.52                                     
+FFCALDBA-DDAD0067-DOSSIER EN PROVENANCE DE DBI VIDE                                                                     
+FFCALDBA-BBAD0008-STATISTIQUES SUR LES FICHIERS (ENREGISTREMENTS LUS/ECRITS)                                            
+FFCALDBA-BBAD0009-PA-FICHIER (READ.) : 000000000000002                                                                  
+FFCALDBA-BBAD0009-FY-FICHIER (WRITE) : 000000000000000                                                                  
+FFCALDBA-BBAD0009-EMPLOYEES. (WRITE) : 000000000000000                                                                  
+FFCALDBA-BBAD0009-PAY SLIPS. (WRITE) : 000000000000000                                                                  
+FFCALDBA-BBAD0009-PAY DOSS.. (WRITE) : 000000000000000                                                                  
+FFCALDBI-BBAD0036- (/) ERREUR DANS MODULE DBA : CODE RETOUR 01  -  /                                                    
+FDLZXBEB-DDAH0097-INSERT/UPDATE OF ZY8D: 000000000000001                                                                
+FFCALDZZ-BBAD0009-EMPLOYEES. (XTRAC) : 000000000000001                                                                  
+FFCALDZZ-BBAD0009-PAY DOSS.. (XTRAC) : 000000000000001                                                                  
+FFCALDBI-BBAD0008-STATISTIQUES SUR LES FICHIERS (ENREGISTREMENTS LUS/ECRITS)                                            
+FFCALDBI-BBAD0009-FA-FICHIER (READ.) : 000000000000003                                                                  
+FFCALDBI-BBAD0009-FK-FICHIER (READ.) : 000000000000000                                                                  
+FFCALDBI-BBAD0009-TABLE AB10 (READ.) : 000000000000279                                                                  
+FFCALDBI-BBAD0009-FX-FICHIER (WRITE) : 000000000000003                                                                  
+FFCALDBI-BBAD0009-PO-FICHIER (READ.) : 000000000000001                                                                  
+FFCALDBI-BBAD0009-PAY DOSS.. (READ.) : 000000000000001                                                                  
+FFCALDBI-BBAD0009-EMPLOYEES. (READ.) : 000000000000001                                                                  
+FFCALDBI-DDAD0024-NOMBRE DE BULLETINS ECRITS DANS LA SORTIE DE TEST DE DBI : 000000000000000                            
+FFCALDBI-DDAF0066-NOMBRE DE SALARIES ECRITS DANS LA SORTIE DE TEST DE DBI : 000000000000000.                            
+EX017BG0-BBAD0011-*** DBI : FIN ANORMALE - HORODATAGE DE FIN   : 2019-04-26-16.59.52  **** CODE RETOUR 12 ******        
+
+
+cp: cannot stat `/qa161/txt/tmp/T410IZ.24952': No such file or directory
+*****************************************************************
+*                         Fin anormale                          *
+*****************************************************************
+*-------------------------- STEP943N ---------------------------*
+*           Libération de l'identifiant de population           *
+*---------------------------------------------------------------*
+EX017BE9-BBAD0001-------------------------------------------------------------------------------------------------------
+EX017BE9-BBAD0002-IDENTIFICATION DU PROGRAMME : BE9/7.000/2017-10-12-12.48.40/F/                                        
+EX017BE9-BBAD0003-DEBUT DE TRAITEMENT   - HORODATAGE DE DEBUT : 2019-04-26-16.59.52                                     
+EX017BE9-BBAD0004-LISTE DES PARAMETRES LUS                                                                              
+EX017BE9-BBAD0006-....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8                      
+EX017BE9-00000000-PA430066                                                                                              
+EX017BE9-BBAD0005-LISTE DES PARAMETRES INTERPRETES ET UTILISES                                                          
+EX017BE9-BBAD0006-....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8                      
+EX017BE9-00000000-PA430066                                                                                              
+EX017BE9-BBAM0041-POPULATION 0066 LIBEREE                                                                               
+EX017BE9-BBAD0004-LISTE DES PARAMETRES LUS                                                                              
+EX017BE9-BBAD0006-....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8                      
+EX017BE9-00000000-PA430065                                                                                              
+EX017BE9-BBAD0005-LISTE DES PARAMETRES INTERPRETES ET UTILISES                                                          
+EX017BE9-BBAD0006-....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8                      
+EX017BE9-00000000-PA430065                                                                                              
+EX017BE9-BBAM0041-POPULATION 0065 LIBEREE                                                                               
+EX017BE9-BBAD0008-STATISTIQUES SUR LES FICHIERS (ENREGISTREMENTS LUS/ECRITS)                                            
+EX017BE9-BBAD0009-PA (PA) : 000000000000002                                                                             
+EX017BE9-BBAD0010-*** BE9 : FIN NORMALE  - HORODATAGE DE FIN   : 2019-04-26-16.59.52  **** CODE RETOUR 00 ******        
+
+
+*-------------------------- STEP950A ---------------------------*
+*             Chargement de paramètres dans T950PA              *
+*---------------------------------------------------------------*
+
+
+*-------------------------- STEP950N ---------------------------*
+*                    Terminaison de la phase                    *
+*---------------------------------------------------------------*
+*GE01BLZ-BBAD0001-------------------------------------------------------------------------------------------------------
+*GE01BLZ-BBAD0002-IDENTIFICATION DU PROGRAMME : BLZ/7.000/2018-11-19-17.18.49/F/                                        
+*GE01BLZ-BBAD0003-DEBUT DE TRAITEMENT   - HORODATAGE DE DEBUT : 2019-04-26-16.59.52                                     
+*GE01BLZ-BBAD0004-LISTE DES PARAMETRES LUS                                                                              
+*GE01BLZ-BBAD0006-....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8                      
+*GE01BLZ-00000000-PA50ZO0000318890                                                       000046979                      
+*GE01BLZ-BBAD0005-LISTE DES PARAMETRES INTERPRETES ET UTILISES                                                          
+*GE01BLZ-BBAD0006-....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8                      
+*GE01BLZ-00000000-PA50ZO000031889                                                        ƒ·                             
+*GE01BLZ-BBAD0004-LISTE DES PARAMETRES LUS                                                                              
+*GE01BLZ-BBAD0006-....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8                      
+*GE01BLZ-00000000-PA51001                                                                                               
+*GE01BLZ-BBAD0005-LISTE DES PARAMETRES INTERPRETES ET UTILISES                                                          
+*GE01BLZ-BBAD0006-....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8                      
+*GE01BLZ-00000000-PA51001                                                                                               
+*GE01BLZ-BBAD0004-LISTE DES PARAMETRES LUS                                                                              
+*GE01BLZ-BBAD0006-....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8                      
+*GE01BLZ-00000000-PA52D               100001                                                                            
+*GE01BLZ-BBAD0005-LISTE DES PARAMETRES INTERPRETES ET UTILISES                                                          
+*GE01BLZ-BBAD0006-....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8                      
+*GE01BLZ-00000000-PA52D               10 001                                                                            
+*GE01BLZ-BBAD0009-IZ (SZ) : 000000000000000                                                                             
+*GE01BLZ-BBAD0010-*** BLZ : FIN NORMALE  - HORODATAGE DE FIN   : 2019-04-26-16.59.52  **** CODE RETOUR 00 ******        
+rm: cannot remove `/qa161/txt/tmp/T950RS.24952': No such file or directory
+
+
+
+
+JOB : JK3W                            DATE : 2019/04/26 16:59:52
+
+
+*---------------------------------------------------------------*
+*                          Fin du job                           *
+*---------------------------------------------------------------*
