@@ -1,0 +1,28 @@
+<div class="row" *ngIf="count > 0">
+  <div class="col-md-6 text-center">
+    <p>
+      {{ getMin() }} - {{ getMax() }} of {{ count }} |  {{ totalPages() }} pages
+    </p>
+  </div>
+  <div class="col-md-6">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+
+        <li class="page-item" [class.disabled]=" page === 1 || loading" [class.active]="page === 1">
+          <a class="page-link" href="javascript:void(0)" (click)="onPrev()">Previous</a>
+        </li>
+
+        <li *ngFor="let pageNum of getPages()" class="page-item" [class.disabled]=" loading"
+            [class.active]="pageNum === page">
+          <a class="page-link" href="javascript:void(0)" (click)="onPage(pageNum)">{{ pageNum }}</a>
+        </li>
+
+        <li class="page-item" [class.disabled]=" lastPage() || loading">
+          <a class="page-link" href="javascript:void(0)" (click)="onNext(true)">Next</a>
+        </li>
+
+      </ul>
+    </nav>
+
+  </div>
+</div>

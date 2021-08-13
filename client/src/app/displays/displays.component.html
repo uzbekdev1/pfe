@@ -1,0 +1,75 @@
+<h1>Displays</h1>
+
+<nav class="navbar navbar-light bg-light">
+  <a class="btn btn-primary" routerLink="/displays/add">Add new</a>
+  <form class="form-inline" #form1="ngForm" (ngSubmit)="searchForm(form1)">
+    <input class="form-control mr-sm-2" name="keyword" id="keyword" #keyword="ngModel" [(ngModel)]="filter.keyword"
+           type="search" placeholder="Keyword" aria-label="Keyword">
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+
+<div class="table-responsive">
+  <table class="table" *ngIf="model">
+    <thead>
+    <tr>
+      <th width="5%">Nom du programme</th>
+      <th width="10%">Display</th>
+      <th width="5%">Nom de la table</th>
+      <th width="25%">Standard Solution</th>
+      <th width="5%">Indice de gravité</th>
+      <th width="25%">User Solution</th>
+      <th width="10%">Free column-1</th>
+      <th width="5%"></th>
+      <th width="5%"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of model.content">
+      <td>{{ item.progName}}</td>
+      <td>{{ item.display}}</td>
+      <td>{{ item.nomTable}}</td>
+      <td>{{ item.descSol}}</td>
+      <td>{{ item.indiceGravity}}</td>
+      <td>{{ item.userSol}}</td>
+      <td>{{ item.freeColumn1}}</td>
+      <td>
+        <a [routerLink]="['/displays/edit',item.id]" class="btn btn-success">Edit</a>
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger" [swal]="['Oops!', 'Want delete?', 'warning']"
+                (confirm)="deleteItem(item)">Delete
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="row" *ngIf="model">
+  <div class="col-xs-12 col-12">
+    <my-pagination
+      (goPage)="goToPage($event)"
+      (goNext)="onNext()"
+      (goPrev)="onPrev()"
+      [pagesToShow]="5"
+      [page]="filter.page"
+      [perPage]="filter.size"
+      [count]="model.totalElements"></my-pagination>
+  </div>
+</div>
+
+<ng-template #formTemplate>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Display form</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="closeModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" (click)="closeModal()">Close</button>
+    <button type="button" class="btn btn-primary">Save</button>
+  </div>
+</ng-template>

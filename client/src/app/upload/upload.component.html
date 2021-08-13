@@ -1,0 +1,58 @@
+<div class="container">
+
+  <h1>Upload</h1>
+
+  <form class="py-4" #form="ngForm" (ngSubmit)="uploadFile(form)">
+
+    <div class="form-group">
+      <label for="file">Log file</label>
+      <input type="file" class="form-control-file" name="file" id="file"
+             (change)="chooseFile($event)"/>
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" [(ngModel)]="copy" name="copy" class="form-check-input" id="copy">
+      <label class="form-check-label" for="copy">Sauvegarder le fichier ?</label>
+    </div>
+    <button type="submit" class="btn btn-primary mb-2" [disabled]="!selectedFile">Submit</button>
+  </form>
+
+  <div class="card mb-3" *ngIf="model&&!model.error">
+
+    <div class="card-body" *ngIf="model.lines&&model.lines.length>0">
+      <h5 class="card-title">Blocks</h5>
+      <select multiple class="form-control" size="20">
+        <option *ngFor="let line of  model.lines">{{line}}</option>
+      </select>
+    </div>
+
+    <div class="card-body" *ngIf="model.solutions&&model.solutions.length>0">
+      <h5 class="card-title">Solutions</h5>
+      <table class="table" *ngIf="model.solutions">
+        <thead>
+        <tr>
+          <th width="5%">Nom du programme</th>
+          <th width="10%">Display</th>
+          <th width="25%">Solution standard</th>
+          <th width="25%">Solutions utilisateurs</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of model.solutions">
+          <td>{{ item.progName}}</td>
+          <td>{{ item.display}}</td>
+          <td>{{ item.descSol}}</td>
+          <td>{{ item.userSol}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <div class="mb-3" *ngIf="model&& model.error">
+
+    <h4 class="text-center text-danger">{{model.error}}</h4>
+
+  </div>
+
+</div>

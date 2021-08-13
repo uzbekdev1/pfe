@@ -1,0 +1,49 @@
+<div class="container">
+  <h1>Form</h1>
+
+  <form #form="ngForm" [ngClass]="{'needs-validation':form.invalid,'was-validated':form.valid}" novalidate
+        (ngSubmit)="saveForm(form)" *ngIf="model">
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="progName">Nom du programme <strong class="text-danger">*</strong></label>
+        <input type="text" class="form-control" id="progName" name="progName" #progName="ngModel"
+               [(ngModel)]="model.progName" required>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="display">Display <strong class="text-danger">*</strong></label>
+        <input type="text" class="form-control" id="display" name="display" #display="ngModel"
+               [(ngModel)]="model.display" required>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="nomTable">Nom de la table </label>
+        <input type="text" class="form-control" id="nomTable" name="nomTable" #nomTable="ngModel"
+               [(ngModel)]="model.nomTable">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-8 mb-3">
+        <label for="descSol">Standard Solution <strong class="text-danger">*</strong></label>
+        <textarea class="form-control" id="descSol" name="descSol" #descSol="ngModel" [(ngModel)]="model.descSol"
+                  required></textarea>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="indiceGravity">Indice de gravité</label>
+        <input type="text" class="form-control" id="indiceGravity" name="indiceGravity" #indiceGravity="ngModel"
+               [(ngModel)]="model.indiceGravity">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-8 mb-3">
+        <label for="userSol">User Solution</label>
+        <textarea class="form-control" id="userSol" name="userSol" #userSol="ngModel"
+                  [(ngModel)]="model.userSol"></textarea>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="freeColumn1">Free column-1</label>
+        <input type="text" class="form-control" id="freeColumn1" name="freeColumn1" #freeColumn1="ngModel"
+               [(ngModel)]="model.freeColumn1">
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit" [disabled]="form.invalid||form.submitted">Submit</button>
+  </form>
+</div>

@@ -1,0 +1,44 @@
+<div class="container" *ngIf="file">
+
+  <h1>{{file}}</h1>
+
+  <div class="card mb-3" *ngIf="model&&!model.error">
+
+    <div class="card-body" *ngIf="model.lines&&model.lines.length>0">
+      <h5 class="card-title">Blocks</h5>
+      <select multiple class="form-control" size="20">
+        <option *ngFor="let line of  model.lines">{{line}}</option>
+      </select>
+    </div>
+
+    <div class="card-body" *ngIf="model.solutions&&model.solutions.length>0">
+      <h5 class="card-title">Solutions</h5>
+      <table class="table" *ngIf="model.solutions">
+        <thead>
+        <tr>
+          <th width="5%">Nom du programme</th>
+          <th width="10%">Display</th>
+          <th width="25%">Solution standard</th>
+          <th width="25%">Solutions utilisateurs</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of model.solutions">
+          <td>{{ item.progName}}</td>
+          <td>{{ item.display}}</td>
+          <td>{{ item.descSol}}</td>
+          <td>{{ item.userSol}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <div class="mb-3" *ngIf="model&& model.error">
+
+    <h4 class="text-center text-danger">{{model.error}}</h4>
+
+  </div>
+
+</div>

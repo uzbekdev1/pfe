@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Files</h1>
+
+  <p class="text-danger text-center" *ngIf="model&&model.length==0">
+    Not found any files!
+  </p>
+
+  <ul class="list-group" *ngIf="model&&model.length>0">
+    <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let item of model">
+      {{item.key}}
+      <span class="badge badge-info badge-pill">
+       <a href="{{item.value}}" class="btn btn-outline-info text-white">Download</a>
+    </span>
+      <span class="badge badge-warning badge-pill">
+      <a [routerLink]="'/scan'" [queryParams]="{file:item.key}" class="btn btn-outline-warning text-white">Scan</a>
+    </span>
+      <span class="badge badge-danger badge-pill">
+     <button class="btn btn-outline-danger text-white" [swal]="['Oops!', 'Want delete?', 'warning']"
+             (confirm)="deleteItem(item.key)">Delete</button>
+    </span>
+    </li>
+  </ul>
+</div>
